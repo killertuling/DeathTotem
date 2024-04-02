@@ -3,6 +3,7 @@ package top.catnies.deathtotem;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
+import org.bukkit.command.defaults.ReloadCommand;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
@@ -14,6 +15,13 @@ public final class DeathTotem extends JavaPlugin {
     @Override
     public void onEnable() {
         instance = this;
+
+        /*检查前置插件是否安装*/
+        if (!getServer().getPluginManager().isPluginEnabled("ItemsAdder")) {
+            getServer().getConsoleSender().sendMessage("ItemsAdder 插件未安装！请先安装ItemsAdder插件！本插件即将关闭！");
+            getServer().getPluginManager().disablePlugin(this);
+            return;
+        }
 
         /*初始化配置文件*/
         ConfigManager.loadConfig();
