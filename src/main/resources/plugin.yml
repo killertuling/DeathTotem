@@ -1,0 +1,5 @@
+name: DeathTotem
+version: '${project.version}'
+main: top.catnies.deathtotem.DeathTotem
+api-version: '1.18'
+authors: [Catnies]
