@@ -82,7 +82,6 @@
   <distributionManagement>
       <repository>
           <id>github</id> <!-- 与设置中的 server-id 对应 -->
-          <username>killertuling</username>
           <url>https://maven.pkg.github.com/killertuling/DeathTotem</url> <!-- 替换为你的 GitHub 用户名和仓库 -->
       </repository>
   </distributionManagement>
