@@ -78,4 +78,11 @@
           <scope>provided</scope>
       </dependency>
   </dependencies>
+
+  <distributionManagement>
+      <repository>
+          <id>github</id> <!-- 与设置中的 server-id 对应 -->
+          <url>https://maven.pkg.github.com/killertuling/DeathTotem</url> <!-- 替换为你的 GitHub 用户名和仓库 -->
+      </repository>
+  </distributionManagement>
 </project>
